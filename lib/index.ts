@@ -1,10 +1,10 @@
 const addon = require('bindings')('addon');
 
-export interface X11Class {
+export interface InputController {
     moveCursor(deltaX: number, deltaY: number): void,
     mouseButton(buttonNum: number, press: boolean): void,
 }
 
-export var X11Class: {
-    new(): X11Class
-} = addon.X11Obj
+export var InputController: {
+    new(): InputController
+} = addon.InputController
