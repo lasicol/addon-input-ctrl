@@ -9,14 +9,13 @@
           'libraries': ['-lX11', '-lXtst'],
         }],
         ['OS=="win"', {
-          "sources": [ 
-            "src/input_device_ctrl_win.cc"
-          ],
+
         }]
-        ],
+      ],
 
       "sources": [ 
-          "src/addon.cc"
+          "src/addon.cc",
+          "src/input_device_ctrl.cc"
       ],
       "include_dirs": [
         "<!@(node -p \"require('node-addon-api').include\")"

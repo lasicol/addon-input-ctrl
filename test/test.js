@@ -1,6 +1,6 @@
 const addon = require("../dist");
 
-const obj = new addon.X11Class();
+const obj = new addon.InputController();
 
 // Move cursor
 obj.moveCursor(100,100);

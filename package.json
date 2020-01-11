@@ -1,5 +1,5 @@
 {
-  "name": "addon-x11",
+  "name": "addon-input-ctrl",
   "version": "1.0.0",
   "description": "The addon should expose functionality form x11lib to nodejs",
   "main": "dist/index.js",

@@ -3,6 +3,12 @@
 #define INPUT_DEVICE_CTRL_H
 
 #include <napi.h>
+#ifdef __linux__ 
+#include <X11/Xlib.h>
+#elif _WIN32
+
+#endif
+
 
 class InputController : public Napi::ObjectWrap<InputController> {
  public:
@@ -14,6 +20,11 @@ class InputController : public Napi::ObjectWrap<InputController> {
 
   void moveCursor(const Napi::CallbackInfo& info);
   void mouseButton(const Napi::CallbackInfo& info);
+  
+  #ifdef __linux__ 
+  Display* display;
+  #endif
+  
 
 };
 
